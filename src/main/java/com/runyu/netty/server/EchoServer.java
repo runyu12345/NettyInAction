@@ -25,7 +25,7 @@ public class EchoServer {
 		this.port = port;
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		if(args.length != 1) {
 			System.err.println("Usage: " + EchoServer.class.getSimpleName() + " <port>");
 		}
@@ -34,7 +34,8 @@ public class EchoServer {
 		
 		EchoServer echoServer = new EchoServer(port);
 		
-		// 调用启动方法 TODO
+		// 调用启动方法 
+		echoServer.start();
 		
 	}
 	
