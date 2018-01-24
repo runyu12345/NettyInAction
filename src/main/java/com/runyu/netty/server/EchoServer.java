@@ -46,6 +46,9 @@ public class EchoServer {
 		
 		final EchoServerHandler echoServerHandler = new EchoServerHandler();
 		
+		// 这里用来证明一下, final修饰的对象
+		System.out.println(echoServerHandler.hashCode());
+		
 		// 创建 EventLoopGroup 
 		EventLoopGroup eventLoopGroup = new NioEventLoopGroup();
 		
