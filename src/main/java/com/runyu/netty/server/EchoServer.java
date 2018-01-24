@@ -14,7 +14,7 @@ import com.runyu.netty.server.handler.EchoServerHandler;
 
 /**
  * Server端完整类
- * @author runyu
+ * @author runyu12345@163.com
  *
  */
 public class EchoServer {
