@@ -44,6 +44,8 @@ public class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 	 */
 	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
+		//这里怎么证明异常时调用了这个方法? TODO
+		System.out.println("客户端异常时触发:======>exceptionCaught()");
 		// 打印异常,关闭channel
 		cause.printStackTrace();
 		ctx.close();
