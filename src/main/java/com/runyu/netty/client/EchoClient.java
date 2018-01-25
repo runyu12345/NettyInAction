@@ -11,7 +11,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import com.runyu.netty.client.handler.EchoClientHandler;
 
 /**
- * 
+ * 客户端的完整类
  * @author runyu12345@163.com
  *
  */
@@ -30,10 +30,15 @@ public class EchoClient {
 		EventLoopGroup eventLoopGroup = new NioEventLoopGroup();
 		
 		try {
+			// 创建一个bootstarp
 			Bootstrap bootstrap = new Bootstrap();
+			//
 			bootstrap.group(eventLoopGroup)
+			//
 			.channel(NioSocketChannel.class)
+			//
 			.remoteAddress(host, port)
+			//
 			.handler(new ChannelInitializer<SocketChannel>() {
 				@Override
 				public void initChannel(SocketChannel ch) throws Exception{

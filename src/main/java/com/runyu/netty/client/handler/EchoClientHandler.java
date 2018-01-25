@@ -8,7 +8,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.util.CharsetUtil;
 
 /**
- * 
+ * 客户端Handler
  * 
  * @author runyu12345@163.com
  *
