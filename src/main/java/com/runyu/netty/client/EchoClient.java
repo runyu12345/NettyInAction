@@ -1,7 +1,5 @@
 package com.runyu.netty.client;
 
-import java.security.acl.Group;
-
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
