@@ -25,6 +25,25 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter{
 
 		ByteBuf in = (ByteBuf)msg;
 		System.out.println("Server received: " + in.toString(CharsetUtil.UTF_8));
+		
+		// Bytebuf的堆缓冲区
+		if(in.hasArray()) {
+			byte[] array = in.array();
+			int offset = in.arrayOffset() + in.readerIndex();
+			// 获取可读字节数
+			int length = in.readableBytes();
+			
+		}
+		// Bytebuf的直接缓冲区
+		else if(!in.hasArray()) {
+			
+			int length = in.readableBytes();
+			System.out.println(length);
+			byte[] array = new byte[length];
+			
+			in.getBytes(in.readerIndex(), array);
+			
+		}
 		// 将接收到的消息写给发送者,但不冲刷出站消息
 		ctx.write(in);
 	}
